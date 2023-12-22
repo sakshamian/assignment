@@ -17,14 +17,16 @@ const FourthStepCard = ({ img, adImg, selected, desc, setSelected, adFooter, ind
                 backgroundColor: `${selected ? "rgba(231, 240, 255, 0.3)" : "white"}`,
                 cursor: 'pointer'
             }}
-            xs={2.8}
+            xs={5.9}
+            md={3.9}
+            lg={2.9}
             onClick={() => {
                 setSelected(index)
             }}
         >
             <Grid container gap={1}>
                 <Grid item sx={{ width: '20', height: '20' }}>
-                    <img src={img} alt="" style={{ width: "100%", height: "100%" }} />
+                    <img src={img} alt="" />
                 </Grid>
                 <Grid>
                     <Typography fontSize={15} fontWeight={500} sx={{ color: 'rgba(43, 35, 165, 1)'}}>{name}</Typography>
@@ -40,7 +42,7 @@ const FourthStepCard = ({ img, adImg, selected, desc, setSelected, adFooter, ind
                 </Typography>
             </Grid>
             <Grid item mt={1} >
-                <img src={adImg} alt="" />
+                <img src={adImg} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 <Grid container display='flex' sx={{ background: 'rgba(245, 245, 245, 1)'}} justifyContent='space-between' alignItems='center' pt={0.5} p={1}>
                     <Typography fontSize={12} sx={{ color: 'rgba(43, 35, 165, 1)'}}>Mukund Cake Shop</Typography>
                     <img src={adFooter} alt="" />
